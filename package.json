@@ -1,0 +1,24 @@
+{
+  "name": "@dadmor/pure-baldr-card-components",
+  "version": "0.0.10",
+  "description": "Taiwind UiKit card components",
+  "license": "MIT",
+  "repository": "pureBaldr/cardComponents",
+  "keywords": [
+    "light",
+    "less 1 kb",
+    "npm",
+    "package",
+    "react",
+    "uikit",
+    "tailwind",
+    "typescript",
+    "card components"
+  ],
+  "devDependencies": {
+    "@dadmor/pure-baldr-core": "latest",
+    "@dadmor/pure-baldr-layout-components": "latest",
+    "@dadmor/pure-baldr-typo-components": "latest",
+    "@types/react": "^18.0.28"
+  }
+}

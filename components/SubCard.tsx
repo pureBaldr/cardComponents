@@ -1,25 +1,33 @@
+import { ReactNode } from "react";
 import {
   bgMix,
   mixClass,
   paddingxMix,
   paddingyMix,
   shadowMix,
-} from "helpers/P7mixClass";
+} from "@dadmor/pure-baldr-core";
+import {
+  DimentionsType,
+  ColorType,
+  ShadowType,
+} from "@dadmor/pure-baldr-core";
 
-interface Props {
+
+type Props = {
   className?: string;
   truncate?: boolean;
-  bg?: string;
-  shadow?: string;
-  spacing?: string;
-  paddingX?: string;
-  paddingY?: string;
+  bg?: ColorType;
+  shadow?: ShadowType;
+  spacing?: DimentionsType;
+  paddingX?: DimentionsType;
+  paddingY?: DimentionsType;
+  children: ReactNode;
   
 }
-export const Card: React.FC<Props> = ({
+export const SubCard: React.FC<Props> = ({
   className = "",
   children,
-  shadow = "none",
+  shadow = null,
   bg = "gray-light",
   spacing = "lg",
   paddingX,
@@ -40,4 +48,4 @@ export const Card: React.FC<Props> = ({
     </div>
   );
 };
-export default Card;
+export default SubCard;

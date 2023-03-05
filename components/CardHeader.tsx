@@ -1,17 +1,19 @@
-import { TextCellCardHeader } from ".";
-import { Color } from "../layout";
+import { TextCellCardHeader } from "./..";
+import { Color } from "@dadmor/pure-baldr-layout-components";
+import { ColorType } from "@dadmor/pure-baldr-core";
 
-interface Props {
-  title?: string;
-  description?: string;
+type Props = {
+  firstText?: string;
+  secondText?: string;
   rightActionSlot?: JSX.Element;
-  color?: string;
-}
+  color?: ColorType;
+};
+
 export const CardHeader: React.FC<Props> = ({
   rightActionSlot,
-  title = "Title",
-  description = "Description",
-  color="primary"
+  firstText = "Title",
+  secondText = "Description",
+  color = "primary",
 }) => {
   return (
     <div className="flex items-center relative py-6 pr-6 bg-carbon-50 rounded-t-2xl">
@@ -20,8 +22,8 @@ export const CardHeader: React.FC<Props> = ({
       </Color>
       <TextCellCardHeader
         className="flex-1"
-        first={title}
-        second={description}
+        firstText={firstText}
+        secondText={secondText}
       />
       {rightActionSlot ? rightActionSlot : null}
     </div>

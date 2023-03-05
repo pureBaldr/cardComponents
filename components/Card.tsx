@@ -7,16 +7,23 @@ import {
   roundedMix,
   shadowMix,
 } from "@dadmor/pure-baldr-core";
+import {
+  DimentionsType,
+  ColorType,
+  ShadowType,
+  RoundedType,
+} from "@dadmor/pure-baldr-core";
 
 type Props = {
   className?: string;
   truncate?: boolean;
-  bg?: string;
-  shadow?: string;
-  spacing?: string;
-  rounded?: string;
+  bg?: ColorType;
+  shadow?: ShadowType;
+  spacing?: DimentionsType;
+  rounded?: RoundedType;
   children: ReactNode;
 };
+
 export const Card: React.FC<Props> = ({
   className = "",
   children,

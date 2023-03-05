@@ -1,19 +1,21 @@
-import { mixClass } from "helpers/P7mixClass";
-import { Text } from "components/themes/PureBaldrTheme/typo";
+import { mixClass } from "@dadmor/pure-baldr-core";
+import { Text } from "@dadmor/pure-baldr-typo-components";
+import { ColorType } from "@dadmor/pure-baldr-core";
 
-interface Props {
-  first?: string;
-  second?: string;
+type Props = {
+  firstText?: string;
+  secondText?: string;
   className?: string;
   truncate?: boolean;
-  color?:string
-}
+  color?: ColorType;
+};
+
 export const TextCellCardHeader: React.FC<Props> = ({
-  first,
-  second,
+  firstText,
+  secondText,
   className = "",
   truncate = false,
-  color = "primary"
+  color = "primary",
 }) => {
   return (
     <div className={className}>
@@ -25,7 +27,7 @@ export const TextCellCardHeader: React.FC<Props> = ({
           truncate: truncate,
         })}
       >
-        {first}
+        {firstText}
       </Text>
 
       <Text
@@ -35,7 +37,7 @@ export const TextCellCardHeader: React.FC<Props> = ({
           truncate: truncate,
         })}
       >
-        {second}
+        {secondText}
       </Text>
     </div>
   );
